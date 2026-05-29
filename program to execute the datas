@@ -1,0 +1,58 @@
+Write a program to execute the datas with the statement.
+
+Input Format
+
+first input corresponds to integer
+second input corresponds to float
+third input corresponds to char
+fourth input correspond to string
+fifth input correspond to String
+Constraints
+
+No Constraints
+
+Output Format
+
+execute the user inputs with the statemets
+Sample Input 0
+
+23
+45.56
+A
+hello
+hello world
+Sample Output 0
+
+Integer is 23
+Float is 45.56
+Character is A
+Strings are hello and hello world
+
+
+Solution
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner (System.in);
+        int number = scan.nextInt();
+        float fnumber = scan.nextFloat();
+        char character = scan.next().charAt(0);
+        String scharacter = scan.next();
+        scan.nextLine();
+        String sscharacter = scan.nextLine();
+        
+        System.out.println("Integer is "+number);
+        System.out.println("Float is "+fnumber);
+        System.out.println("Character is "+character);
+        System.out.println("Strings are "+scharacter+" and "+sscharacter);
+        
+        }
+}
