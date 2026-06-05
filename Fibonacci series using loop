@@ -1,0 +1,74 @@
+Write the program to calculate the sum of the Fibonacci series between the range of the two values. The n is the start of the range value and m is the end of the range value. Finally, return the sum of the range value of the Fibonacci Series.
+
+Input Format
+
+Input consists of two integers.
+
+Constraints
+
+N is greater than equal to one and lesser than equal to 20
+
+M is greater than equal to one and lesser than equal to 20
+
+Output Format
+
+The sum of the range value.
+
+If the constraints are more than the input print the statement is "Invalid Input".
+
+Sample Input 0
+
+3
+5
+Sample Output 0
+
+The Sum of Fibonacci value is 6.0
+Sample Input 1
+
+11
+15
+Sample Output 1
+
+The Sum of Fibonacci value is 898.0
+Sample Input 2
+
+22
+23
+Sample Output 2
+
+Invalid Input
+
+Solution
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner (System.in);
+        int num1 = scan.nextInt();
+        int num2 = scan.nextInt();
+        int sum =0;
+        int first_value = 0;
+        int second_value = 1;
+        if(num1>0 && num1<20 && num2 >1 && num2 <20){
+            for(int i =1;i<=num2;i++){
+             if(i>=num1){
+                 sum = sum+first_value;
+             }
+                int next = first_value+second_value;
+                first_value = second_value;
+                second_value = next;
+        }
+            System.out.printf("The Sum of Fibonacci value is %.1f",(float)sum);
+        }
+        else{
+            System.out.print("Invalid Input");
+        }
+    }
+}
